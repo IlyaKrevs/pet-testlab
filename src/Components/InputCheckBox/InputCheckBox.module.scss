@@ -1,0 +1,19 @@
+@import '../../vars/vars';
+
+.labelText {
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+
+    @extend %body_16;
+    color: $black;
+    cursor: pointer;
+}
+
+.inputBox {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}

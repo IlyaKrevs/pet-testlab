@@ -1,0 +1,102 @@
+// colours
+$black: #191C1F;
+$dark-gray: #5E646A;
+$gray: #83898F;
+$mid-gray: #C2C8CD;
+$light-gray: #ECEFF2;
+$extra-light-gray: #F6F8FA;
+$white: #FFF;
+
+$dangerous: #F13636;
+$green-success: #25CD82;
+
+$primary-disabled: #ABCAE6;
+$primary: #2A6CEA;
+$primary-hover: #397DFF;
+
+
+// fonts
+@function textWeight($isBold: false) {
+    @if $isBold {
+        @return 600;
+    }
+
+    @else {
+        @return 400;
+    }
+}
+
+@mixin text($size, $isBold, $line-height) {
+    font-family: "Graphik LCG";
+    font-size: $size;
+    font-style: normal;
+    font-weight: textWeight($isBold);
+    line-height: $line-height;
+}
+
+%h1 {
+    @include text(52px, true, 64px)
+}
+
+%h2 {
+    @include text(40px, true, 56px)
+}
+
+%h3 {
+    @include text(32px, true, 40px)
+}
+
+%h4 {
+    @include text(24px, true, 32px)
+}
+
+%h5 {
+    @include text(20px, true, 24px)
+}
+
+%h6 {
+    @include text(16px, true, 24px)
+}
+
+// text
+%caption_12 {
+    @include text(12px, 400, 24px);
+    letter-spacing: 1.44px;
+    text-transform: uppercase;
+}
+
+// 18
+%body_18 {
+    @include text(18px, false, 32px)
+}
+
+%body_18_bold {
+    @include text(18px, true, 32px)
+}
+
+// 16
+%body_16 {
+    @include text(16px, false, 28px)
+}
+
+%body_16_bold {
+    @include text(16px, true, 28px)
+}
+
+// 14
+%body_14 {
+    @include text(14px, false, 24px)
+}
+
+%body_14_bold {
+    @include text(14px, true, 24px)
+}
+
+// 12
+%body_12 {
+    @include text(12px, false, 16px)
+}
+
+%body_12_bold {
+    @include text(12px, true, 16px)
+}

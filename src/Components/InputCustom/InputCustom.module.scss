@@ -1,0 +1,12 @@
+@import '../../vars/vars';
+
+.mainContainer {
+    display: flex;
+    width: 272px;
+    height: 64px;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+

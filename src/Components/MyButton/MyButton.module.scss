@@ -1,0 +1,37 @@
+@import "../../vars/vars";
+
+.buttonContainer {
+    @extend %h5;
+
+    display: inline-flex;
+    padding: 20px 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    border: 1px solid transparent;
+    border-radius: 4px;
+
+    cursor: pointer;
+}
+
+.primaryColour {
+    color: $white;
+
+    background-color: $primary;
+
+    &:hover {
+        background-color: $primary-hover;
+    }
+}
+
+.defaultColour {
+    color: $black;
+
+    background-color: $light-gray;
+
+    &:hover {
+        border: 1px solid $mid-gray;
+        background-color: $white;
+    }
+}
