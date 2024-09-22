@@ -1,0 +1,109 @@
+@import '../../vars/vars';
+
+.mainContainer {
+    padding: 80px 355px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+
+.main__about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 61px;
+
+    .main__about_title {
+        color: $black;
+        @extend %h2
+    }
+
+    .main__about_itemContainer {
+        display: flex;
+        gap: 32px;
+
+        .main__about_item {
+            width: 280px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            padding-right: 35px; //for text
+
+            .main__about_item_pic {
+                height: 72px;
+                width: 72px;
+            }
+
+            .main__about_item_wrapper {
+                .main__about_item_title {
+                    color: $black;
+                    @extend %h6;
+                }
+
+                .main__about_item_text {
+                    color: $dark-gray;
+                    @extend %body_14
+                }
+            }
+
+
+        }
+    }
+}
+
+
+.secondContainer {
+    position: relative;
+    display: flex;
+    gap: 32px;
+
+    .secondContainer__item {
+        width: 592px;
+        height: 448px;
+        display: flex;
+
+
+        .secondContainer__textContainer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 16px;
+
+            .secondContainer__title {
+                color: $black;
+                @extend %h3;
+            }
+
+
+            .secondContainer__descriptionContainer {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .secondContainer__descriptionItem {
+                color: $dark-gray;
+                @extend %body_16;
+            }
+        }
+
+
+        .imageContainer {
+            position: absolute;
+            height: 100%;
+            width: fit-content;
+        }
+
+        .frontImage {
+            z-index: 2;
+        }
+
+        .backImage {
+            z-index: 1;
+        }
+
+    }
+}

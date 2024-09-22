@@ -1,0 +1,57 @@
+@import '../../vars/vars';
+
+.carouselContainer {
+    height: fit-content;
+
+    display: flex;
+    gap: 32px;
+}
+
+.carouselItem {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    flex-shrink: 0;
+    padding: 22px;
+    height: 316px; // 100%
+
+    width: 341px;
+
+    border-radius: 8px;
+    background: $white;
+    box-shadow: 0px 5px 24px 0px rgba(0, 0, 0, 0.10);
+}
+
+.personContainer {
+    display: flex;
+    gap: 16px;
+
+    .picContainer {
+        width: 44px;
+        height: 44px;
+    }
+
+
+    .infoContainer {
+
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        .nameContainer {
+            color: $black;
+            @extend %h6;
+        }
+
+        .cityContainer {
+            color: $dark-gray;
+            @extend %body_12;
+        }
+    }
+}
+
+.carouselItem__text {
+    color: $black;
+    @extend %body_14;
+}

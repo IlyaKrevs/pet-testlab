@@ -1,0 +1,21 @@
+@import '../../vars/vars';
+
+.container {
+    padding: 80px 355px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+
+    background-color: $white;
+}
+
+.container:nth-child(2n + 1) {
+    background-color: $extra-light-gray;
+}
+
+.title {
+    text-align: center;
+    color: $black;
+    @extend %h2;
+}
