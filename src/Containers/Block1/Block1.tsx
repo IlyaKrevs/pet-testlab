@@ -61,11 +61,13 @@ export const Block1: React.FC<IBlock1> = ({ }) => {
                             Сделай круто тестовое задание и у тебя получится
                         </span>
                     </div>
-                    <MyButton type='default' currentText='Проще простого!' />
+                    <MyButton
+                        color='default'
+                        currentText='Проще простого!'
+                        handlerOnClick={() => false}
+                    />
                 </div>
             </div>
-
-
 
         </div>
     )

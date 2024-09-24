@@ -2,11 +2,63 @@
 
 .mainContainer {
     display: flex;
-    width: 272px;
-    height: 64px;
-    padding: 16px;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    flex-shrink: 0;
+
+    height: 64px;
+    padding: 0 16px;
+
+    border: 2px solid $extra-light-gray;
+    border-radius: 4px;
+
+    cursor: text;
+
 }
 
+.labelContainer {
+    display: flex;
+    flex-direction: column;
+
+    .labelText {
+        color: $dark-gray;
+        @extend %body_18;
+    }
+}
+
+.inputText {
+    color: $black;
+    @extend %body_18;
+
+    background-color: inherit;
+
+    &::placeholder {
+        color: $mid-gray;
+    }
+}
+
+.isHidden {
+    height: 0px;
+}
+
+.noActiveColors {
+    background-color: $extra-light-gray;
+
+}
+
+.activeColors {
+    background-color: $white;
+    border-color: $mid-gray;
+}
+
+.goodColors {
+    background-color: $white;
+    border-color: $green-success;
+}
+
+.badColors {
+    background-color: $white;
+    border-color: $dangerous;
+}
+
+
+.iconContainer {}

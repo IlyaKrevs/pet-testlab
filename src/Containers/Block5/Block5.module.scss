@@ -6,22 +6,4 @@
     grid-template: 1fr 1fr / 1fr 1fr;
     gap: 32px;
 
-    .item {
-        width: 592px;
-        height: auto;
-
-        display: flex;
-        flex-direction: column;
-        gap: 17px;
-
-        .item__title {
-            color: $black;
-            @extend %body_18_bold;
-        }
-
-        .item__description {
-            color: $black;
-            @extend %body_16;
-        }
-    }
 }

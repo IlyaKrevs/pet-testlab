@@ -2,15 +2,16 @@ import React from 'react'
 import classes from './MyButton.module.scss'
 
 interface IButton {
-    type: 'primary' | 'default',
+    color: 'primary' | 'default',
     currentText: string,
+    handlerOnClick: () => void,
 }
 
-export const MyButton: React.FC<IButton> = ({ type, currentText }) => {
+export const MyButton: React.FC<IButton> = ({ color, currentText, handlerOnClick }) => {
 
     let styleArr = [classes.buttonContainer]
 
-    if (type === 'primary') {
+    if (color === 'primary') {
         styleArr.push(classes.primaryColour)
     } else {
         styleArr.push(classes.defaultColour)
@@ -18,7 +19,10 @@ export const MyButton: React.FC<IButton> = ({ type, currentText }) => {
 
 
     return (
-        <button className={styleArr.join(' ')}>
+        <button
+            className={styleArr.join(' ')}
+            onClick={handlerOnClick}
+        >
             {currentText}
         </button>
     )

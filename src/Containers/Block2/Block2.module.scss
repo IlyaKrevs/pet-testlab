@@ -25,32 +25,6 @@
         display: flex;
         gap: 32px;
 
-        .main__about_item {
-            width: 280px;
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            padding-right: 35px; //for text
-
-            .main__about_item_pic {
-                height: 72px;
-                width: 72px;
-            }
-
-            .main__about_item_wrapper {
-                .main__about_item_title {
-                    color: $black;
-                    @extend %h6;
-                }
-
-                .main__about_item_text {
-                    color: $dark-gray;
-                    @extend %body_14
-                }
-            }
-
-
-        }
     }
 }
 
