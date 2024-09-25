@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/pet-testlab/static/css/main.b0c0920c.css",
+    "main.js": "/pet-testlab/static/js/main.29b5b865.js",
+    "static/media/mainBGimage.png": "/pet-testlab/static/media/mainBGimage.f9b3ce910fed05ab63ff.png",
+    "static/media/block2bg.png": "/pet-testlab/static/media/block2bg.e05080817f8a02f3ae4a.png",
+    "static/media/block2bg2.png": "/pet-testlab/static/media/block2bg2.197ed37341fce55a2a5b.png",
+    "index.html": "/pet-testlab/index.html",
+    "main.b0c0920c.css.map": "/pet-testlab/static/css/main.b0c0920c.css.map",
+    "main.29b5b865.js.map": "/pet-testlab/static/js/main.29b5b865.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b0c0920c.css",
+    "static/js/main.29b5b865.js"
+  ]
+}
