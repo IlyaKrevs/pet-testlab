@@ -22,6 +22,15 @@
     padding: 28px;
 
     color: $black;
-    @extend %body_18;
+    @include body_18;
 }
 
+
+//375
+@media (max-width:1919px) {
+    .formContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}

@@ -6,4 +6,10 @@
     grid-template: 1fr 1fr / 1fr 1fr;
     gap: 32px;
 
+
+    @media (max-width: 1919px) {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
 }

@@ -1,31 +1,18 @@
 @import '../../vars/vars';
 
-.mainContainer {
-    padding: 80px 355px;
-
-    display: flex;
-    flex-direction: column;
-    gap: 80px;
-}
-
 
 .main__about {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 61px;
 
     .main__about_title {
         color: $black;
-        @extend %h2
+        @include h2
     }
 
     .main__about_itemContainer {
         display: flex;
         gap: 32px;
-
     }
+
 }
 
 
@@ -35,6 +22,7 @@
     gap: 32px;
 
     .secondContainer__item {
+        position: relative;
         width: 592px;
         height: 448px;
         display: flex;
@@ -48,7 +36,7 @@
 
             .secondContainer__title {
                 color: $black;
-                @extend %h3;
+                @include h3;
             }
 
 
@@ -60,7 +48,7 @@
 
             .secondContainer__descriptionItem {
                 color: $dark-gray;
-                @extend %body_16;
+                @include body_16;
             }
         }
 
@@ -79,5 +67,83 @@
             z-index: 1;
         }
 
+    }
+
+
+}
+
+
+
+//768
+@media (max-width: 1919px) {
+    .main__about {
+
+        .main__about_itemContainer {
+            display: grid;
+            grid-template: 1fr 1fr / 1fr 1fr;
+        }
+    }
+
+    .secondContainer {
+        justify-content: space-around;
+
+        .secondContainer__item {
+            width: 351px;
+            height: 265px;
+
+            .secondContainer__textContainer {
+
+                .secondContainer__title {
+                    @include h5;
+
+                }
+
+
+                .secondContainer__descriptionContainer {}
+
+                .secondContainer__descriptionItem {}
+            }
+        }
+    }
+}
+
+
+//375
+@media (max-width: 767px) {
+    .main__about {
+
+        .main__about_itemContainer {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .secondContainer {
+        display: flex;
+        flex-direction: column-reverse;
+
+        .secondContainer__item {
+            width: 342px;
+            height: 258px;
+
+        }
+    }
+}
+
+//320
+@media (max-width: 374px) {
+
+    .secondContainer {
+
+        .secondContainer__item {
+            width: 288px;
+            height: 258px;
+
+            .imageContainer {
+
+                width: 100%;
+            }
+
+        }
     }
 }

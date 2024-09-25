@@ -2,11 +2,9 @@
 
 
 .main__about_item {
-    width: 280px;
     display: flex;
     flex-direction: column;
     gap: 16px;
-    padding-right: 35px; //for text
 
     .main__about_item_pic {
         height: 72px;
@@ -14,16 +12,22 @@
     }
 
     .main__about_item_wrapper {
+        max-width: 280px;
+
         .main__about_item_title {
             color: $black;
-            @extend %h6;
+            @include h6;
         }
 
         .main__about_item_text {
             color: $dark-gray;
-            @extend %body_14
+            @include body_14;
         }
     }
 
+    @media (max-width: 1919px) {
+        flex-direction: row;
+        justify-content: center;
 
+    }
 }

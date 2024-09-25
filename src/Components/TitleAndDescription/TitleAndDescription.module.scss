@@ -1,7 +1,6 @@
 @import '../../vars/vars';
 
 .item {
-    width: 592px;
     height: auto;
 
     display: flex;
@@ -10,11 +9,15 @@
 
     .item__title {
         color: $black;
-        @extend %body_18_bold;
+        @include body_18_bold;
     }
 
     .item__description {
         color: $black;
-        @extend %body_16;
+        @include body_16;
+    }
+
+    @media (max-width: 1919px) {
+        gap: 46px;
     }
 }

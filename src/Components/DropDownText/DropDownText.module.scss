@@ -1,7 +1,7 @@
 @import '../../vars/vars';
 
 .expandItem {
-
+    display: flex;
 
     border-top: 1px solid $extra-light-gray;
 
@@ -13,10 +13,11 @@
 
     .expandTitle {
         color: $black;
-        @extend %body_18_bold;
+        @include body_18_bold;
 
         display: flex;
         justify-content: space-between;
+        align-items: center;
 
 
         cursor: pointer;
@@ -39,7 +40,7 @@
 
     .expandDescription {
         color: $dark-gray;
-        @extend %body_18;
+        @include body_18;
     }
 
 
@@ -47,6 +48,10 @@
 }
 
 .customButton {
+    display: flex;
+    flex-shrink: 0;
+    gap: 10px;
+
     height: 24px;
     width: 24px;
 
@@ -89,4 +94,3 @@
 .activeStyle {
     rotate: 45deg;
 }
-

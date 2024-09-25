@@ -7,11 +7,10 @@ interface IInputCustom {
     value: string,
     handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void,
     isValid: boolean | null,
-    tabIndex: number
 }
 
 
-export const InputCustom: React.FC<IInputCustom> = ({ labelText, value, handleChange, isValid, tabIndex }) => {
+export const InputCustom: React.FC<IInputCustom> = ({ labelText, value, handleChange, isValid }) => {
 
 
     const [isFocused, setIsFocused] = useState<boolean>(false)
@@ -78,7 +77,7 @@ export const InputCustom: React.FC<IInputCustom> = ({ labelText, value, handleCh
                 </span>
 
                 <input
-                    tabIndex={tabIndex}
+                    tabIndex={0}
                     ref={inputRef}
                     className={inputStyles.join(' ')}
                     type='text'

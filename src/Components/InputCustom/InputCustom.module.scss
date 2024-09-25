@@ -21,13 +21,13 @@
 
     .labelText {
         color: $dark-gray;
-        @extend %body_18;
+        @include body_18;
     }
 }
 
 .inputText {
     color: $black;
-    @extend %body_18;
+    @include body_18;
 
     background-color: inherit;
 

@@ -1,7 +1,7 @@
 @import "../../vars/vars";
 
 .buttonContainer {
-    @extend %h5;
+    @include h5;
 
     display: inline-flex;
     padding: 20px 40px;

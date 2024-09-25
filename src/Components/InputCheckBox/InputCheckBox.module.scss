@@ -7,7 +7,7 @@
     gap: 16px;
 
 
-    @extend %body_16;
+    @include body_16;
     color: $black;
     cursor: pointer;
 }

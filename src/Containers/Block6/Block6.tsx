@@ -93,14 +93,12 @@ export const Block6: React.FC<IBlock6> = () => {
                             value={name.name}
                             handleChange={handleChangeName}
                             isValid={name.isOK}
-                            tabIndex={0}
                         />
                         <InputCustom
                             labelText='Телефон'
                             value={phone.phone}
                             handleChange={handleChangePhone}
                             isValid={phone.isOK}
-                            tabIndex={0}
                         />
                         <InputCheckBox
                             isChecked={isAccept}

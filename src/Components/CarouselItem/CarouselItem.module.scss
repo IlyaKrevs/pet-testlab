@@ -1,0 +1,145 @@
+@import '../../vars/vars';
+
+
+.shadowWrapper {
+    padding: 30px;
+    padding-right: 0;
+    height: 100%;
+}
+
+.carouselItem {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    padding: 22px;
+    height: 100%;
+
+    width: 341px;
+
+    border-radius: 8px;
+    background: $white;
+    box-shadow: 0px 5px 24px 0px rgba(0, 0, 0, 0.10);
+
+    cursor: pointer;
+}
+
+.personContainer {
+    display: flex;
+    gap: 16px;
+
+    .picContainer {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+    }
+
+
+    .infoContainer {
+
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        .nameContainer {
+            color: $black;
+            @include h6;
+        }
+
+        .cityContainer {
+            color: $dark-gray;
+            @include body_12;
+        }
+    }
+}
+
+.carouselItem__text {
+    color: $black;
+    @include body_14;
+}
+
+//768
+
+@media (max-width: 1919px) {
+    .shadowWrapper {
+        padding: 20px 5px;
+    }
+
+    .carouselItem {}
+
+    .personContainer {
+
+
+        .picContainer {}
+
+
+        .infoContainer {
+
+
+            .nameContainer {}
+
+            .cityContainer {}
+        }
+    }
+
+    .carouselItem__text {}
+}
+
+
+//375
+@media (max-width: 767px) {
+    .shadowWrapper {
+        padding: 20px 0;
+    }
+
+    .carouselItem {
+        height: fit-content;
+
+    }
+
+    .personContainer {
+
+
+        .picContainer {}
+
+
+        .infoContainer {
+
+
+            .nameContainer {}
+
+            .cityContainer {}
+        }
+    }
+
+    .carouselItem__text {}
+}
+
+//320
+@media (max-width: 767px) {
+    .shadowWrapper {
+        padding: 20px 10px;
+    }
+
+    .carouselItem {
+        height: fit-content;
+        width: 270px;
+    }
+
+    .personContainer {
+
+
+        .picContainer {}
+
+
+        .infoContainer {
+
+
+            .nameContainer {}
+
+            .cityContainer {}
+        }
+    }
+
+    .carouselItem__text {}
+}
