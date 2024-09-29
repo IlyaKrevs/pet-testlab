@@ -4,63 +4,28 @@ import { BlockBlank } from '../../Components/BlockBlank/BlockBlank';
 import { InputCustom } from '../../Components/InputCustom/InputCustom';
 import { InputCheckBox } from '../../Components/InputCheckBox/InputCheckBox';
 import { MyButton } from '../../Components/MyButton/MyButton';
+import { useInputValidation } from '../../fn/Hooks/useInputValidation';
 
 interface IBlock6 {
 
 }
-
-
-
-type isValid = {
-    isOK: boolean | null
-}
-type IName = { name: string } & isValid
-type IPhone = { phone: string } & isValid
-
 export const Block6: React.FC<IBlock6> = () => {
 
-    const [name, setName] = useState<IName>({
-        name: '',
-        isOK: null,
-    })
+    const nameRegExp: RegExp = /^[A-Za-zА-Яа-яёЁ/s-]+$/;
+    const [name, isValidName, handlerChangeName, resetName] = useInputValidation(nameRegExp)
 
-    const [phone, setPhone] = useState<IPhone>({
-        phone: '',
-        isOK: null
-    })
+    const phoneRegExp: RegExp = /^\d+$/;
+    const [phone, isValidPhone, handlerChangePhone, resetPhone] = useInputValidation(phoneRegExp)
 
     const [isAccept, setIsAccept] = useState<boolean>(false)
-
     function handlerAccept(e: React.ChangeEvent<HTMLInputElement>) {
         setIsAccept(e.target.checked)
     }
 
-    function handleChangeName(e: React.ChangeEvent<HTMLInputElement>) {
-
-        let isValid = null
-
-        if (e.target.value.length > 0) {
-            isValid = /^[A-Za-zА-Яа-яёЁ/s-]+$/.test(e.target.value)
-        }
-
-        setName({ name: e.target.value, isOK: isValid })
-    }
-
-
-    function handleChangePhone(e: React.ChangeEvent<HTMLInputElement>) {
-
-        let isValid = null
-
-        if (e.target.value.length > 0) {
-            isValid = /^\d+$/.test(e.target.value)
-        }
-
-        setPhone({ phone: e.target.value, isOK: isValid })
-    }
 
 
     function handleSubmitClick() {
-        if (!name.isOK || !phone.isOK || !isAccept) {
+        if (!isValidName || !isValidPhone || !isAccept) {
             return
         }
 
@@ -70,35 +35,37 @@ export const Block6: React.FC<IBlock6> = () => {
         //         'Content-Type': 'application/json'
         //     },
         //     body: JSON.stringify({
-        //         name: name.name,
-        //         phone: phone.phone
+        //         name: name,
+        //         phone: phone
         //     })
         // })
         //     .then(res => res.json())
         // .then(data => console.log(data))
 
-        setName({ name: '', isOK: null })
-        setPhone({ phone: '', isOK: null })
+        resetName()
+        resetPhone()
         setIsAccept(false)
     }
 
     return (
         <>
             <BlockBlank titleText='Отправь форму'>
-                <div className={classes.container}>
+                <article className={classes.container}>
 
-                    <div className={classes.formContainer}>
+                    <form
+                        onSubmit={e => e.preventDefault()}
+                        className={classes.formContainer}>
                         <InputCustom
                             labelText='Имя'
-                            value={name.name}
-                            handleChange={handleChangeName}
-                            isValid={name.isOK}
+                            value={name}
+                            handleChange={handlerChangeName}
+                            isValid={isValidName}
                         />
                         <InputCustom
                             labelText='Телефон'
-                            value={phone.phone}
-                            handleChange={handleChangePhone}
-                            isValid={phone.isOK}
+                            value={phone}
+                            handleChange={handlerChangePhone}
+                            isValid={isValidPhone}
                         />
                         <InputCheckBox
                             isChecked={isAccept}
@@ -109,14 +76,14 @@ export const Block6: React.FC<IBlock6> = () => {
                             currentText='Отправить'
                             handlerOnClick={handleSubmitClick}
                         />
-                    </div>
+                    </form>
 
-                </div>
+                </article>
 
             </BlockBlank>
-            <div className={classes.footer}>
+            <footer className={classes.footer}>
                 © 2021 Лаборатория интернет
-            </div>
+            </footer>
         </>
     )
 }

@@ -18,6 +18,7 @@ export const MyButton: React.FC<IButton> = ({ color, currentText, handlerOnClick
     }
 
 
+
     return (
         <button
             className={styleArr.join(' ')}

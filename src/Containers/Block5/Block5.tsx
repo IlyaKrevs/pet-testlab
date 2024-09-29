@@ -13,15 +13,15 @@ interface IBlock5 {
 export const Block5: React.FC<IBlock5> = () => {
 
 
-    let content = data5.map(item => <TitleAndDescription {...item} />)
+    let content = data5.map((item, i) => <TitleAndDescription key={i} {...item} />)
 
     return (
         <BlockBlank >
-            <div className={classes.container}>
+            <ul className={classes.container}>
 
                 {content}
 
-            </div>
+            </ul>
         </BlockBlank>
     )
 }

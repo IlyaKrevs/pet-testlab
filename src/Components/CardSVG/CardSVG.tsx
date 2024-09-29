@@ -9,7 +9,7 @@ interface ICardSVG {
 
 export const CardSVG: React.FC<ICardSVG> = ({ icon, title, desc }) => {
     return (
-        <div className={classes.main__about_item}>
+        <li className={classes.main__about_item}>
 
             <div className={classes.main__about_item_pic}>
                 {icon}
@@ -17,14 +17,14 @@ export const CardSVG: React.FC<ICardSVG> = ({ icon, title, desc }) => {
 
             <div className={classes.main__about_item_wrapper}>
 
-                <div className={classes.main__about_item_title}>
+                <h6 className={classes.main__about_item_title}>
                     {title}
-                </div>
-                <div className={classes.main__about_item_text}>
+                </h6>
+                <p className={classes.main__about_item_text}>
                     {desc}
-                </div>
+                </p>
 
             </div>
-        </div>
+        </li>
     )
 }

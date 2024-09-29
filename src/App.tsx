@@ -13,7 +13,7 @@ import { Block6 } from './Containers/Block6/Block6';
 
 function App() {
   return (
-    <div className="App">
+    <main className="App">
 
       <Block1 />
 
@@ -27,7 +27,7 @@ function App() {
 
       <Block6 />
 
-    </div>
+    </main>
   );
 }
 

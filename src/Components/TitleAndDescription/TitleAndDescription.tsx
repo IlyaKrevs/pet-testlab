@@ -8,15 +8,15 @@ interface ITitleAndDesc {
 
 export const TitleAndDescription: React.FC<ITitleAndDesc> = ({ title, desc }) => {
     return (
-        <div className={classes.item}>
+        <li className={classes.item}>
 
-            <div className={classes.item__title}>
+            <header className={classes.item__title}>
                 {title}
-            </div>
-            <div className={classes.item__description}>
+            </header>
+            <p className={classes.item__description}>
                 {desc}
-            </div>
-        </div>
+            </p>
+        </li>
 
     )
 }

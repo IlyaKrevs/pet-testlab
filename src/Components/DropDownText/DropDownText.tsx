@@ -21,26 +21,26 @@ export const DropDownText: React.FC<IDropDownText> = ({ title, desc }) => {
         btnStyles.push(classes.activeStyle)
     }
     return (
-        <div className={classes.expandItem}
+        <li className={classes.expandItem}
             onClick={onClickHandler}
         >
 
-            <div className={classes.expandTitle}>
-                <span>
+            <article className={classes.expandTitle}>
+                <header>
                     {title}
-                </span>
+                </header>
 
                 <div className={btnStyles.join(' ')}>
                     <div className={classes.verticalLine}></div>
                     <div className={classes.horizontalLine}></div>
                 </div>
-            </div>
+            </article>
             {isOpen && (
-                <div className={classes.expandDescription}>
+                <p className={classes.expandDescription}>
                     {desc}
-                </div>
+                </p>
             )}
-        </div>
+        </li>
     )
 }
 

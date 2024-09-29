@@ -12,7 +12,6 @@ interface IInputCustom {
 
 export const InputCustom: React.FC<IInputCustom> = ({ labelText, value, handleChange, isValid }) => {
 
-
     const [isFocused, setIsFocused] = useState<boolean>(false)
     const inputRef = useRef<HTMLInputElement | null>(null)
 
@@ -32,10 +31,9 @@ export const InputCustom: React.FC<IInputCustom> = ({ labelText, value, handleCh
             }
         }
 
-        document.addEventListener('mousedown', handleUnFocus)
-
         let handleFocus = () => setIsFocused(true)
 
+        document.addEventListener('mousedown', handleUnFocus)
         inputRef.current?.addEventListener('focus', handleFocus)
 
         return () => {

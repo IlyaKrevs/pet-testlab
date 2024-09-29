@@ -12,14 +12,14 @@ interface IBlock4 {
 
 export const Block4: React.FC<IBlock4> = ({ }) => {
 
-    let content = data4.map(item => <DropDownText {...item} />)
+    let content = data4.map((item, i) => <DropDownText key={i} {...item} />)
 
     return (
         <BlockBlank titleText='Вопросы и ответы'>
 
-            <div>
+            <ul>
                 {content}
-            </div>
+            </ul>
 
         </BlockBlank>
     )

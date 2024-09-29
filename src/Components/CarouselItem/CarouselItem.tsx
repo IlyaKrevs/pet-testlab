@@ -23,11 +23,11 @@ export const CarouselItem: React.FC<ICarouselItem> = ({ name, city, desc, pic })
     }
 
     return (
-        <div className={classes.shadowWrapper}>
+        <li className={classes.shadowWrapper}>
 
-            <div className={classes.carouselItem}>
+            <article className={classes.carouselItem}>
 
-                <div className={classes.personContainer}>
+                <header className={classes.personContainer}>
 
                     <img src={showPic}
                         className={classes.picContainer}
@@ -36,25 +36,25 @@ export const CarouselItem: React.FC<ICarouselItem> = ({ name, city, desc, pic })
 
                     <div className={classes.infoContainer}>
 
-                        <div className={classes.nameContainer}>
+                        <h6 className={classes.nameContainer}>
                             {name}
-                        </div>
+                        </h6>
 
                         <div className={classes.cityContainer}>
                             {city}
                         </div>
 
                     </div>
-                </div>
+                </header>
 
 
-                <div className={classes.carouselItem__text}>
+                <p className={classes.carouselItem__text}>
                     {desc}
-                </div>
+                </p>
 
-            </div>
+            </article>
 
-        </div>
+        </li>
     )
 }
 

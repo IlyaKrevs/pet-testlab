@@ -9,17 +9,17 @@ interface IBlockBlank {
 
 export const BlockBlank: React.FC<IBlockBlank> = ({ titleText, children }) => {
     return (
-        <div className={classes.container}>
+        <section className={classes.container}>
             {!(titleText?.length && (titleText.length > 0)) ? null
                 :
                 (
-                    <div className={classes.title}>
+                    <h2 className={classes.title}>
                         {titleText}
-                    </div>
+                    </h2>
                 )
             }
             {children}
-        </div>
+        </section>
     )
 }
 

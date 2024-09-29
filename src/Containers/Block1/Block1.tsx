@@ -5,8 +5,6 @@ import mainBGimage from './mainBGimage.png'
 
 import classes from './Block1.module.scss'
 
-
-
 interface IBlock1 {
 
 }
@@ -44,37 +42,37 @@ export const Block1: React.FC<IBlock1> = ({ }) => {
 
 
     return (
-        <div className={classes.blockWrapper}>
+        <nav className={classes.blockWrapper}>
 
 
-            <div className={menuStyle.join(' ')}>
+            <ul className={menuStyle.join(' ')}>
 
-                <div className={classes.openMenuItem}>
+                <li className={classes.openMenuItem}>
                     <div className={classes.openMenuItem__text}>Как это работает</div>
                     <div className={classes.openMenuItem__arrow}></div>
-                </div>
+                </li>
 
-                <div className={classes.openMenuItem}>
+                <li className={classes.openMenuItem}>
                     <div className={classes.openMenuItem__text}>3-й блок</div>
                     <div className={classes.openMenuItem__arrow}></div>
-                </div>
+                </li>
 
-                <div className={classes.openMenuItem}>
+                <li className={classes.openMenuItem}>
                     <div className={classes.openMenuItem__text}>Вопросы и ответы</div>
                     <div className={classes.openMenuItem__arrow}></div>
-                </div>
+                </li>
 
-                <div className={classes.openMenuItem}>
+                <li className={classes.openMenuItem}>
                     <div className={classes.openMenuItem__text}>Форма</div>
                     <div className={classes.openMenuItem__arrow}></div>
-                </div>
+                </li>
 
-            </div>
+            </ul>
 
-            <div className={classes.mainHeader}>
+            <section className={classes.mainHeader}>
                 <div className={classes.mainHeader__wrapper}>
 
-                    <div className={classes.mainHeader__left}>
+                    <section className={classes.mainHeader__left}>
                         <div className={classes.logo__container}>
 
                             <span className={[classes.logo__circle, classes.circle_primaryColour].join(' ')}></span>
@@ -83,38 +81,36 @@ export const Block1: React.FC<IBlock1> = ({ }) => {
                         <h5 className={logoTextStyle.join(' ')}>
                             testLab
                         </h5>
-                    </div>
+                    </section>
 
 
-                    <div className={classes.mainHeader__right}>
+                    <ul className={classes.mainHeader__right}>
 
-                        <span className={classes.mainHeader__navItem}>Как это работает</span>
-                        <span className={classes.mainHeader__navItem}>3-й блок</span>
-                        <span className={classes.mainHeader__navItem}>Вопросы и ответы</span>
-                        <span className={classes.mainHeader__navItem}>Форма</span>
+                        <li className={classes.mainHeader__navItem}>Как это работает</li>
+                        <li className={classes.mainHeader__navItem}>3-й блок</li>
+                        <li className={classes.mainHeader__navItem}>Вопросы и ответы</li>
+                        <li className={classes.mainHeader__navItem}>Форма</li>
 
-
-                        <div className={classes.openMenuBtn}
+                        <li className={classes.openMenuBtn}
                             onClick={handlerOpenMenu}
                         >
                             <div className={[classes.btnLine, topLineStyle].join(' ')}></div>
                             <div className={[classes.btnLine, botLineStyle].join(' ')}></div>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
-            </div>
+            </section>
 
 
-            <div
+            <section
                 style={{ backgroundImage: `url(${mainBGimage})` }}
                 className={classes.firstBlock}
-
             >
 
                 <div className={classes.firstBlock__underlay}></div>
 
 
-                <div className={classes.firstBlock__content}>
+                <article className={classes.firstBlock__content}>
                     <div className={classes.firstBlock__content_text}>
                         <h1 className={classes.firstBlock__content_title}>
                             Говорят, никогда не поздно сменить профессию
@@ -128,9 +124,9 @@ export const Block1: React.FC<IBlock1> = ({ }) => {
                         currentText='Проще простого!'
                         handlerOnClick={() => false}
                     />
-                </div>
-            </div>
+                </article>
+            </section>
 
-        </div>
+        </nav>
     )
 }

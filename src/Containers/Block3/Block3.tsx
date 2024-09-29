@@ -45,9 +45,9 @@ export const Block3: React.FC<IBlock3> = () => {
         },
     }
 
-    let content = data2.map(item => {
+    let content = data2.map((item, i) => {
         return (
-            <SwiperSlide>
+            <SwiperSlide key={i}>
                 <CarouselItem {...item} />
             </SwiperSlide>
         )
@@ -56,7 +56,7 @@ export const Block3: React.FC<IBlock3> = () => {
     return (
         <BlockBlank titleText='Отзывы'>
 
-            <div className={classes.carouselContainer}>
+            <article className={classes.carouselContainer}>
 
                 <div className={classes.leftArrow}>
                     <div className={classes.arrow}></div>
@@ -77,7 +77,7 @@ export const Block3: React.FC<IBlock3> = () => {
 
                 </Swiper>
 
-            </div>
+            </article>
 
         </BlockBlank >
     )
